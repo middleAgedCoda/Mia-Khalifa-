@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Mia Khalifa — Media Personality · Entrepreneur · Activist · Immigrant 🇱🇧</title>
+<meta name="description" content="Mia Khalifa — Sarah Joe Chamoun. Born Beirut, 1993. BA History, UT El Paso. Sheytan jewelry founder. KNWLS, Di Petsa, Trashy Clothing runway. Vogue India cover. Oxford Union. BBC HARDtalk. 65M+ across platforms. Immigrant. Not Malala."/>
+<meta property="og:title" content="Mia Khalifa — The Line"/>
+<meta property="og:description" content="She became famous before she had control. Then she took it back. This is the controlled narrative — built by her."/>
+<meta property="og:image" content="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Hero.webp"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@miakhalifa"/>
+<meta name="theme-color" content="#0D0D0D"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════════════════════
+   KURO DIGITAL — MIA KHALIFA — "THE LINE"
+
+   Born: Sarah Joe Chamoun · Beirut, Lebanon · Feb 10, 1993
+   The line: everything that happened to her / vs / everything
+   she built after. The site dissolves that line as you scroll.
+   The journey is the layout.
+
+   ──────────────────────────────────────────────────────────
+   Bone   #E8E4DC   Archival paper · the page · cream light
+   Olive  #28352C   Authority · military school · depth
+   Ink    #0D0D0D   Absolute presence
+   Wine   #5C1520   The price paid · Lebanon · Sheytan
+   Gold   #C4985A   Earned status · Sheytan jewelry
+   Dust   #9A8C80   Secondary text · past fading
+   Stone  #1E1E1E   Deep dark surface
+   ──────────────────────────────────────────────────────────
+   Cormorant Garamond — editorial French luxury serif
+   DM Sans            — clean, lets the story breathe
+   DM Mono            — facts, dates, data
+   ──────────────────────────────────────────────────────────
+   Kuro Digital — kuro-digital-acid-lime.onrender.com
+   GitHub images: https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/
+═══════════════════════════════════════════════════════════ */
+
+:root{
+  --bone:   #E8E4DC; --bone2:#DDD8CE; --bone3:#CEC8BC;
+  --olive:  #28352C; --olive-lt:#3D5045; --olive-dk:#162018;
+  --ink:    #0D0D0D; --ink2:#1E1E1E; --ink3:#2E2E2E;
+  --wine:   #5C1520; --wine-lt:#8B2535; --wine-dk:#3A0B12;
+  --gold:   #C4985A; --gold-lt:#D8B478; --gold-dk:#8A6830;
+  --dust:   #9A8C80; --dust-lt:#BFB4A8;
+  --stone:  #1A1A1A; --stone2:#242424; --stone3:#303030;
+  --line-c: rgba(232,228,220,.08);
+  --line2:  rgba(232,228,220,.14);
+
+  --fd:'Cormorant Garamond',serif;
+  --fs:'DM Sans',sans-serif;
+  --fm:'DM Mono',monospace;
+
+  --sw:min(1320px,100vw - 48px);
+  --r:.3s ease;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--bone);font-family:var(--fs);cursor:none;overflow-x:hidden}
+
+/* Grain overlay */
+body::after{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)' opacity='0.032'/%3E%3C/svg%3E");
+  mix-blend-mode:screen;opacity:.6}
+
+/* ── CROSSHAIR CURSOR ── */
+#cur-h,#cur-v{position:fixed;background:var(--gold);z-index:9997;pointer-events:none;transition:opacity .2s}
+#cur-h{width:20px;height:1px;transform:translate(-50%,-50%)}
+#cur-v{width:1px;height:20px;transform:translate(-50%,-50%)}
+#cur-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;position:fixed;z-index:9998;pointer-events:none;transform:translate(-50%,-50%);transition:width .2s,height .2s}
+body.hov #cur-h{width:32px}
+body.hov #cur-v{height:32px}
+body.hov #cur-dot{width:6px;height:6px}
+@media(pointer:coarse){#cur-h,#cur-v,#cur-dot{display:none}body{cursor:auto}}
+
+/* ── LOADER ── */
+#loader{position:fixed;inset:0;z-index:9000;background:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity 1.2s,visibility 1.2s}
+#loader.out{opacity:0;visibility:hidden;pointer-events:none}
+.ll{font-family:var(--fm);font-size:.48rem;letter-spacing:.22em;text-transform:uppercase;color:var(--stone3);opacity:0;animation:rUp .7s ease forwards}
+.ll:nth-child(1){animation-delay:.1s}
+.ll:nth-child(2){animation-delay:.35s;color:var(--dust)}
+.ll:nth-child(3){animation-delay:.6s;color:var(--wine-lt)}
+.ll-name{font-family:var(--fd);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;font-style:italic;color:var(--bone);letter-spacing:.06em;opacity:0;animation:rUp .9s .8s ease forwards}
+.lbar{width:180px;height:1px;background:var(--stone3);overflow:hidden}
+.lbar-f{height:100%;width:0%;background:linear-gradient(to right,var(--wine),var(--gold))}
+@keyframes rUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ── NAV ── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:800;height:60px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;transition:background .4s,border-bottom-color .4s;border-bottom:1px solid transparent}
+#nav.stk{background:rgba(13,13,13,.92);backdrop-filter:blur(16px);border-bottom-color:var(--line-c)}
+.nl{font-family:var(--fd);font-style:italic;font-weight:500;font-size:1.2rem;color:var(--bone);text-decoration:none;letter-spacing:.04em}
+.nl em{color:var(--gold);font-style:normal}
+.nls{display:flex;gap:26px;list-style:none}
+.nls a{font-family:var(--fm);font-size:.46rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dust);text-decoration:none;transition:color var(--r)}
+.nls a:hover{color:var(--bone)}
+.ncta{font-family:var(--fm);font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:8px 20px;text-decoration:none;transition:background var(--r)}
+.ncta:hover{background:var(--gold-lt)}
+.ham{display:none;background:none;border:none;cursor:none;padding:8px;flex-direction:column;gap:5px}
+.ham span{display:block;width:22px;height:1px;background:var(--bone)}
+#mob{display:none;position:fixed;inset:0;z-index:790;background:var(--ink);padding:90px 48px 48px;flex-direction:column;gap:0;border-right:1px solid var(--line-c)}
+#mob.open{display:flex}
+#mob a{font-family:var(--fd);font-style:italic;font-size:clamp(2.5rem,8vw,5rem);font-weight:300;color:var(--bone);text-decoration:none;padding:10px 0;border-bottom:1px solid var(--line-c);transition:color var(--r)}
+#mob a:hover{color:var(--gold)}
+@media(max-width:900px){.nls,.ncta{display:none}.ham{display:flex}}
+@media(max-width:600px){#nav{padding:0 24px}#mob{padding:80px 24px 24px}}
+
+/* ── SECTION UTILS ── */
+.sec{padding:120px 48px;position:relative;overflow:hidden;z-index:1}
+.sec-ink{background:var(--ink)}
+.sec-stone{background:var(--stone)}
+.sec-stone2{background:var(--stone2)}
+.sec-olive{background:var(--olive-dk)}
+.sec-bone{background:var(--bone);color:var(--ink)}
+.sec-wine{background:var(--wine-dk)}
+.sw{max-width:var(--sw);margin:0 auto}
+
+.kk{font-family:var(--fm);font-size:.46rem;letter-spacing:.24em;text-transform:uppercase;color:var(--stone3);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.kk::before{content:'';width:24px;height:1px;background:var(--stone3)}
+.kk-g{color:var(--gold)}.kk-g::before{background:var(--gold)}
+.kk-w{color:var(--wine-lt)}.kk-w::before{background:var(--wine-lt)}
+.kk-b{color:var(--bone2)}.kk-b::before{background:var(--bone2)}
+.kk-ink{color:var(--ink3)}.kk-ink::before{background:var(--ink3)}
+
+.tt{font-family:var(--fd);font-size:clamp(3rem,5.5vw,6rem);font-weight:400;line-height:.88;color:var(--bone)}
+.tt em{font-style:italic;color:var(--gold);font-weight:300}
+.tt-dk{color:var(--ink)}
+.tt-dk em{color:var(--wine)}
+.ttsm{font-family:var(--fd);font-size:clamp(2.2rem,4vw,4.2rem);font-weight:400;line-height:.9;color:var(--bone)}
+.ttsm em{font-style:italic;color:var(--gold);font-weight:300}
+
+.bb{font-family:var(--fs);font-size:.94rem;line-height:2;color:var(--dust)}
+.bb strong{color:var(--bone);font-weight:500}
+.bb em{color:var(--gold);font-style:italic}
+.bb-dk{font-family:var(--fs);font-size:.94rem;line-height:2;color:rgba(13,13,13,.55)}
+.bb-dk strong{color:var(--ink);font-weight:500}
+
+.bt-gold{font-family:var(--fm);font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:13px 28px;text-decoration:none;display:inline-block;border:1px solid var(--gold);transition:all var(--r)}
+.bt-gold:hover{background:var(--gold-lt);border-color:var(--gold-lt)}
+.bt-ghost{font-family:var(--fm);font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bone);background:transparent;padding:13px 28px;text-decoration:none;display:inline-block;border:1px solid rgba(232,228,220,.2);transition:all var(--r)}
+.bt-ghost:hover{border-color:var(--bone);background:rgba(232,228,220,.05)}
+.bt-wine{font-family:var(--fm);font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bone);background:var(--wine);padding:13px 28px;text-decoration:none;display:inline-block;border:1px solid var(--wine);transition:all var(--r)}
+.bt-wine:hover{background:var(--wine-lt);border-color:var(--wine-lt)}
+.bt-dk{font-family:var(--fm);font-size:.5rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bone);background:var(--ink);padding:13px 28px;text-decoration:none;display:inline-block;border:2px solid rgba(13,13,13,.2);transition:all var(--r)}
+.bt-dk:hover{background:var(--wine);border-color:var(--wine)}
+
+.rv{opacity:0;transform:translateY(20px);transition:opacity 1s ease,transform 1s ease}
+.rvl{opacity:0;transform:translateX(-20px);transition:opacity 1s ease,transform 1s ease}
+.rvr{opacity:0;transform:translateX(20px);transition:opacity 1s ease,transform 1s ease}
+.rv.on,.rvl.on,.rvr.on{opacity:1;transform:none}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.g2c{align-items:center}
+@media(max-width:900px){.g2{grid-template-columns:1fr;gap:40px}.sec{padding:80px 24px}}
+
+/* ══════════════════════════════════════════
+   HERO — "THE LINE"
+══════════════════════════════════════════ */
+#hero{min-height:100vh;background:var(--ink);position:relative;display:flex;flex-direction:column;overflow:hidden;padding-top:60px}
+
+/* The dividing line — animated */
+.hero-line{position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(to bottom,transparent 5%,var(--wine) 30%,var(--wine) 70%,transparent 95%);z-index:3;pointer-events:none;transform-origin:top;animation:lineGrow 1.4s .8s ease forwards;transform:scaleY(0)}
+@keyframes lineGrow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+
+/* Subtle radial warmth */
+#hero::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 60% 60% at 30% 50%,rgba(92,21,32,.12),transparent 70%),
+             radial-gradient(ellipse 50% 50% at 75% 40%,rgba(196,152,90,.05),transparent 70%)}
+
+.hero-split{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 60px)}
+
+/* Left side — what happened TO her */
+.hero-left{padding:80px 60px 80px 48px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;z-index:2}
+.hero-before-label{font-family:var(--fm);font-size:.42rem;letter-spacing:.22em;text-transform:uppercase;color:var(--stone3);margin-bottom:32px;opacity:0;animation:rUp .6s .5s ease forwards}
+.hero-before-facts{display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.hbf{display:flex;gap:12px;opacity:0;animation:rUp .6s ease forwards}
+.hbf:nth-child(1){animation-delay:.7s}
+.hbf:nth-child(2){animation-delay:.85s}
+.hbf:nth-child(3){animation-delay:1s}
+.hbf:nth-child(4){animation-delay:1.15s}
+.hbf:nth-child(5){animation-delay:1.3s}
+.hbf-yr{font-family:var(--fm);font-size:.44rem;letter-spacing:.1em;color:var(--wine-lt);flex-shrink:0;width:40px}
+.hbf-t{font-family:var(--fm);font-size:.44rem;letter-spacing:.06em;color:var(--stone3);line-height:1.7}
+
+.hero-h1-left{font-family:var(--fd);font-size:clamp(3.5rem,6vw,7rem);font-weight:300;font-style:italic;line-height:.85;color:rgba(232,228,220,.18);letter-spacing:-.01em;opacity:0;animation:rUp .9s 1.4s ease forwards}
+
+/* Right side — what she built */
+.hero-right{padding:80px 48px 80px 60px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;z-index:2}
+.hero-after-label{font-family:var(--fm);font-size:.42rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;opacity:0;animation:rUp .6s .5s ease forwards}
+.hero-after-facts{display:flex;flex-direction:column;gap:10px;margin-bottom:40px}
+.haf{display:flex;gap:12px;opacity:0;animation:rUp .6s ease forwards}
+.haf:nth-child(1){animation-delay:.7s}
+.haf:nth-child(2){animation-delay:.85s}
+.haf:nth-child(3){animation-delay:1s}
+.haf:nth-child(4){animation-delay:1.15s}
+.haf:nth-child(5){animation-delay:1.3s}
+.haf-yr{font-family:var(--fm);font-size:.44rem;letter-spacing:.1em;color:var(--gold);flex-shrink:0;width:40px}
+.haf-t{font-family:var(--fm);font-size:.44rem;letter-spacing:.06em;color:var(--dust);line-height:1.7}
+
+.hero-h1-right{font-family:var(--fd);font-size:clamp(3.5rem,6vw,7rem);font-weight:300;line-height:.85;color:var(--bone);letter-spacing:-.01em;opacity:0;animation:rUp .9s 1.4s ease forwards}
+.hero-h1-right em{font-style:italic;color:var(--gold)}
+
+/* Hero portrait — absolute, centered, behind the line */
+.hero-portrait{position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;pointer-events:none}
+.hero-portrait img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.18) contrast(1.2) saturate(.6);display:block}
+
+/* Stats bar */
+.hero-stats{border-top:1px solid var(--line-c);display:grid;grid-template-columns:repeat(5,1fr);position:relative;z-index:2;opacity:0;animation:rUp .9s 1.6s ease forwards}
+.hst{padding:22px 28px;border-right:1px solid var(--line-c);cursor:default;transition:background var(--r)}
+.hst:last-child{border-right:none}
+.hst:hover{background:rgba(196,152,90,.04)}
+.hstv{font-family:var(--fd);font-size:1.9rem;font-weight:400;color:var(--bone);line-height:1}
+.hstv em{font-style:italic;color:var(--gold)}
+.hstl{font-family:var(--fm);font-size:.4rem;letter-spacing:.12em;text-transform:uppercase;color:var(--stone3);margin-top:5px}
+
+@media(max-width:900px){
+  #hero::before{display:none}
+  .hero-split{grid-template-columns:1fr}
+  .hero-line{display:none}
+  .hero-left{padding:80px 24px 40px;border-bottom:1px solid var(--line-c)}
+  .hero-right{padding:40px 24px 80px}
+  .hero-stats{grid-template-columns:1fr 1fr 1fr}
+}
+@media(max-width:600px){.hero-stats{grid-template-columns:1fr 1fr}}
+
+/* ── TICKER ── */
+.ticker{background:var(--wine-dk);overflow:hidden;position:relative;z-index:2;border-top:1px solid rgba(92,21,32,.5)}
+.ttrack{display:flex;width:max-content;animation:tScr 44s linear infinite}
+.ti{font-family:var(--fm);font-size:.46rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(232,228,220,.55);padding:10px 22px;white-space:nowrap;flex-shrink:0}
+.tsep{color:var(--gold);padding:0 8px}
+@keyframes tScr{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ══════════════════════════════════════════
+   ORIGIN — THE STORY
+══════════════════════════════════════════ */
+#origin{background:var(--stone)}
+.ori-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:100px;align-items:start}
+.ori-img-col{display:flex;flex-direction:column;gap:8px;position:relative}
+.ori-img-main{overflow:hidden;position:relative}
+.ori-img-main img{width:100%;display:block;filter:contrast(1.1) saturate(.9) brightness(.9);transition:transform .9s,filter .5s}
+.ori-img-main:hover img{transform:scale(1.03);filter:contrast(1.06) saturate(1) brightness(.95)}
+.ori-img-duo{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ori-img-sm{overflow:hidden}
+.ori-img-sm img{width:100%;height:200px;object-fit:cover;object-position:center top;display:block;filter:contrast(1.1) saturate(.85) brightness(.88);transition:transform .8s}
+.ori-img-sm:hover img{transform:scale(1.05)}
+.ori-cap{background:var(--wine-dk);padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+.orc-n{font-family:var(--fd);font-style:italic;font-size:.96rem;color:var(--bone)}
+.orc-m{font-family:var(--fm);font-size:.4rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(232,228,220,.4)}
+.ori-right{display:flex;flex-direction:column;gap:24px}
+.pq{font-family:var(--fd);font-style:italic;font-size:clamp(1.1rem,2vw,1.6rem);color:var(--bone);line-height:1.65;padding-left:20px;border-left:2px solid var(--gold);margin:8px 0}
+.pq em{color:var(--gold);font-style:normal}
+
+.otl{display:flex;flex-direction:column}
+.tli{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line-c);transition:background var(--r)}
+.tli:last-child{border-bottom:none}
+.tli:hover{background:rgba(196,152,90,.03)}
+.tly{font-family:var(--fm);font-size:.44rem;letter-spacing:.1em;color:var(--gold);flex-shrink:0;width:44px;padding-top:3px}
+.tld{width:5px;height:5px;border:1px solid var(--stone3);flex-shrink:0;border-radius:50%;margin-top:5px;transition:all var(--r)}
+.tli:hover .tld{background:var(--gold);border-color:var(--gold)}
+.tlh{font-family:var(--fs);font-size:.88rem;font-weight:500;color:var(--bone);line-height:1.4}
+.tlb{font-family:var(--fs);font-size:.8rem;color:var(--dust);line-height:1.85;margin-top:3px}
+.tlb strong{color:var(--bone)}
+.tlb em{color:var(--gold);font-style:italic}
+@media(max-width:900px){.ori-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ══════════════════════════════════════════
+   THE RECKONING — $12K / BANG BROS / PETITION
+══════════════════════════════════════════ */
+#reckoning{background:var(--wine-dk);position:relative;overflow:hidden}
+#reckoning::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 50%,rgba(92,21,32,.3),transparent)}
+.rec-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.rec-num{font-family:var(--fd);font-size:clamp(5rem,12vw,11rem);font-weight:300;color:rgba(232,228,220,.06);line-height:1;letter-spacing:-.03em;position:relative;z-index:1;margin-bottom:-20px}
+.rec-stat{font-family:var(--fd);font-size:clamp(3rem,6vw,6rem);font-weight:400;color:var(--bone);line-height:1;position:relative;z-index:1}
+.rec-stat em{font-style:italic;color:var(--gold)}
+.rec-label{font-family:var(--fm);font-size:.5rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,228,220,.35);margin-top:12px;position:relative;z-index:1}
+.rec-cards{display:flex;flex-direction:column;gap:12px}
+.rcc{background:rgba(232,228,220,.04);border:1px solid rgba(232,228,220,.08);padding:22px 22px;transition:background var(--r);cursor:default}
+.rcc:hover{background:rgba(232,228,220,.08)}
+.rcc-l{font-family:var(--fm);font-size:.42rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,228,220,.3);margin-bottom:7px}
+.rcc-v{font-family:var(--fd);font-style:italic;font-size:1.05rem;color:var(--bone);line-height:1.5}
+.rcc-v strong{font-style:normal;color:var(--gold)}
+@media(max-width:900px){.rec-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ══════════════════════════════════════════
+   FASHION — THE NEW CHAPTER
+══════════════════════════════════════════ */
+#fashion{background:var(--stone2)}
+.fash-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:48px}
+.runway-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.rg-card{overflow:hidden;position:relative;cursor:default}
+.rg-card img{width:100%;display:block;filter:contrast(1.08) saturate(.88) brightness(.82);transition:transform .8s,filter .5s}
+.rg-card:hover img{transform:scale(1.06);filter:contrast(1.04) saturate(.95) brightness(.92)}
+.rg-card.tall{grid-row:span 2}
+.rg-card.tall img{height:100%;min-height:500px;object-fit:cover;object-position:center top}
+.rg-card.sq img{height:240px;object-fit:cover;object-position:center top}
+.rg-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,13,13,.9),transparent);padding:24px 14px 12px;font-family:var(--fm);font-size:.42rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,228,220,.6)}
+.runway-list{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:1px}
+.rl{background:var(--stone3);padding:16px 18px;display:flex;align-items:center;gap:14px;border-left:2px solid transparent;transition:all var(--r);cursor:default}
+.rl:hover{border-left-color:var(--gold);background:rgba(196,152,90,.05)}
+.rl-num{font-family:var(--fm);font-size:.42rem;letter-spacing:.1em;color:var(--stone3);flex-shrink:0;width:22px}
+.rl-brand{font-family:var(--fd);font-style:italic;font-size:1rem;font-weight:600;color:var(--bone);flex:1}
+.rl-season{font-family:var(--fm);font-size:.42rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dust)}
+.rl-dot{width:5px;height:5px;background:var(--gold);flex-shrink:0;border-radius:50%}
+.emv-bar{background:var(--olive-dk);padding:24px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:1px;flex-wrap:wrap;border-top:2px solid var(--gold)}
+.emv-left{}
+.emv-val{font-family:var(--fd);font-size:2.4rem;font-weight:400;color:var(--gold);line-height:1}
+.emv-val em{font-style:italic}
+.emv-label{font-family:var(--fm);font-size:.46rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(232,228,220,.3);margin-top:4px}
+.emv-note{font-family:var(--fs);font-size:.88rem;color:var(--dust);max-width:500px}
+.emv-note strong{color:var(--bone)}
+@media(max-width:1100px){.runway-grid{grid-template-columns:repeat(2,1fr)}.rg-card.tall{grid-row:auto}}
+@media(max-width:900px){.fash-intro{grid-template-columns:1fr;gap:24px}.runway-list{grid-template-columns:1fr}}
+
+/* ══════════════════════════════════════════
+   SHEYTAN — HER LABEL
+══════════════════════════════════════════ */
+#sheytan{background:var(--ink);position:relative;overflow:hidden}
+#sheytan::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 70% at 80% 50%,rgba(196,152,90,.05),transparent 70%),
+             radial-gradient(ellipse 40% 40% at 10% 80%,rgba(92,21,32,.08),transparent)}
+.shey-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
+.shey-left{}
+.shey-arabic{font-family:var(--fd);font-size:clamp(4rem,8vw,8rem);font-weight:300;color:rgba(196,152,90,.15);line-height:1;direction:rtl;margin-bottom:-10px;letter-spacing:.02em}
+.shey-name{font-family:var(--fd);font-size:clamp(3rem,6vw,6rem);font-weight:300;color:var(--gold);line-height:.9;letter-spacing:-.01em}
+.shey-sub{font-family:var(--fm);font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dust);margin-top:12px;margin-bottom:28px}
+.shey-right{display:flex;flex-direction:column;gap:16px}
+.sc{background:rgba(232,228,220,.03);border:1px solid var(--line-c);border-top:2px solid transparent;padding:24px 22px;transition:all var(--r);cursor:default}
+.sc:hover{border-top-color:var(--gold);background:rgba(196,152,90,.04)}
+.sc-h{font-family:var(--fd);font-style:italic;font-size:1rem;color:var(--bone);margin-bottom:8px}
+.sc-b{font-family:var(--fs);font-size:.8rem;color:var(--dust);line-height:1.9}
+.sc-b strong{color:var(--bone)}
+.shey-img{margin-top:16px;overflow:hidden}
+.shey-img img{width:100%;display:block;filter:contrast(1.1) saturate(.85);transition:transform .9s}
+.shey-img:hover img{transform:scale(1.03)}
+@media(max-width:900px){.shey-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ══════════════════════════════════════════
+   INTERVIEWS / VIDEOS — EDITORIAL
+══════════════════════════════════════════ */
+#interviews{background:var(--stone)}
+.int-intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:48px}
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.vc{background:var(--stone2);border:1px solid var(--line-c);overflow:hidden;position:relative;text-decoration:none;display:block;transition:all var(--r)}
+.vc:hover{border-color:rgba(196,152,90,.3);transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+.vc-thumb{position:relative;aspect-ratio:16/9;overflow:hidden}
+.vc-thumb img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.6) contrast(1.12) saturate(.7);transition:filter .4s,transform .6s}
+.vc:hover .vc-thumb img{filter:brightness(.75) contrast(1.06) saturate(.85);transform:scale(1.04)}
+.vc-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.vc-btn{width:46px;height:46px;background:rgba(13,13,13,.65);border:1px solid rgba(196,152,90,.5);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);transition:all var(--r)}
+.vc-btn::after{content:'';border-left:13px solid var(--gold);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.vc:hover .vc-btn{background:rgba(196,152,90,.15);border-color:var(--gold)}
+.vc-label{position:absolute;top:10px;left:10px;background:rgba(13,13,13,.8);border:1px solid var(--line-c);padding:4px 10px;font-family:var(--fm);font-size:.4rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.vc-info{padding:16px 16px 20px}
+.vc-pub{font-family:var(--fm);font-size:.42rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wine-lt);margin-bottom:5px}
+.vc-title{font-family:var(--fd);font-style:italic;font-size:1rem;color:var(--bone);line-height:1.35;margin-bottom:6px}
+.vc-desc{font-family:var(--fs);font-size:.76rem;color:var(--dust);line-height:1.85}
+/* Short clips row */
+.shorts-row{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:1px}
+@media(max-width:900px){.int-intro{grid-template-columns:1fr;gap:24px}.vid-grid{grid-template-columns:1fr}.shorts-row{grid-template-columns:1fr}}
+
+/* ══════════════════════════════════════════
+   PRESS & VOICE
+══════════════════════════════════════════ */
+#press{background:var(--stone2)}
+.plscroll{overflow:hidden;position:relative;margin:36px 0}
+.plscroll::before,.plscroll::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none}
+.plscroll::before{left:0;background:linear-gradient(to right,var(--stone2),transparent)}
+.plscroll::after{right:0;background:linear-gradient(to left,var(--stone2),transparent)}
+.pltrack{display:flex;gap:1px;width:max-content;animation:plScr 30s linear infinite}
+@keyframes plScr{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.pllogo{flex:0 0 150px;height:52px;background:var(--stone3);border:1px solid var(--line-c);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-style:italic;font-size:.88rem;color:var(--stone3);transition:all var(--r);cursor:default}
+.pllogo:hover{background:rgba(196,152,90,.06);color:var(--bone)}
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px}
+.pcard{background:var(--stone3);padding:28px 24px;border:1px solid var(--line-c);border-top:2px solid transparent;transition:all var(--r);cursor:default}
+.pcard:hover{border-top-color:var(--gold);background:rgba(196,152,90,.04)}
+.ppub{font-family:var(--fm);font-size:.44rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.phl{font-family:var(--fd);font-style:italic;font-size:1rem;color:var(--bone);line-height:1.4;margin-bottom:8px}
+.pbdy{font-family:var(--fs);font-size:.78rem;color:var(--dust);line-height:1.9}
+.pbdy strong{color:var(--bone)}
+@media(max-width:900px){.pcards{grid-template-columns:1fr}}
+
+/* ══════════════════════════════════════════
+   ACTIVISM & IDENTITY
+══════════════════════════════════════════ */
+#activism{background:var(--olive-dk);position:relative;overflow:hidden}
+#activism::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 20% 50%,rgba(196,152,90,.04),transparent)}
+.act-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.act-left{}
+.act-quote{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.6rem);font-style:italic;font-weight:300;color:var(--bone);line-height:1.45;margin-top:20px}
+.act-quote em{font-style:normal;color:var(--gold)}
+.act-attr{font-family:var(--fm);font-size:.46rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,228,220,.3);margin-top:14px}
+.act-pillars{display:flex;flex-direction:column;gap:1px;margin-top:0}
+.ap{background:rgba(232,228,220,.03);border:1px solid rgba(232,228,220,.06);padding:22px 22px;display:flex;gap:16px;align-items:flex-start;transition:background var(--r);cursor:default}
+.ap:hover{background:rgba(232,228,220,.06)}
+.ap-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.ap-h{font-family:var(--fd);font-style:italic;font-size:.98rem;color:var(--bone);margin-bottom:6px}
+.ap-b{font-family:var(--fs);font-size:.78rem;color:rgba(232,228,220,.45);line-height:1.9}
+.ap-b strong{color:rgba(232,228,220,.75)}
+@media(max-width:900px){.act-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ══════════════════════════════════════════
+   GALLERY — THE EDITORIAL EYE
+══════════════════════════════════════════ */
+#gallery{background:var(--ink);padding:80px 0;overflow:hidden}
+.gal-h{max-width:var(--sw);margin:0 auto 36px;padding:0 48px;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px}
+.gal-rows{display:flex;flex-direction:column;gap:8px}
+.gal-row{overflow:hidden;position:relative}
+.gal-row::before,.gal-row::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:3;pointer-events:none}
+.gal-row::before{left:0;background:linear-gradient(to right,var(--ink),transparent)}
+.gal-row::after{right:0;background:linear-gradient(to left,var(--ink),transparent)}
+.gt-a{display:flex;gap:8px;width:max-content;animation:galL 48s linear infinite}
+.gt-b{display:flex;gap:8px;width:max-content;animation:galL 40s linear infinite reverse}
+.gal-row:hover .gt-a,.gal-row:hover .gt-b{animation-play-state:paused}
+@keyframes galL{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.gc{flex-shrink:0;overflow:hidden;position:relative}
+.gc.pt{width:220px;height:310px}
+.gc.sq{width:310px;height:310px}
+.gc.wd{width:400px;height:310px}
+.gc img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:brightness(.8) contrast(1.1) saturate(.82);transition:filter .5s,transform .6s}
+.gal-row:hover .gc img,.gc:hover img{filter:brightness(.92) contrast(1.05) saturate(.9);transform:scale(1.04)}
+@media(max-width:600px){.gal-h{padding:0 24px}}
+
+/* ══════════════════════════════════════════
+   CONTACT / WORK TOGETHER
+══════════════════════════════════════════ */
+#partner{background:var(--bone);color:var(--ink);padding:0}
+.psplit{display:grid;grid-template-columns:1fr 1fr}
+.pleft{padding:100px 60px 100px 48px;background:var(--bone);position:relative}
+.pleft::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--wine),var(--gold))}
+.pright{padding:100px 48px 100px 60px;background:var(--stone);border-left:1px solid var(--line-c)}
+.pform{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.pflbl{font-family:var(--fm);font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(13,13,13,.45)}
+.pflbl-lt{font-family:var(--fm);font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dust)}
+.pfinp{background:var(--bone2);border:1px solid rgba(13,13,13,.12);padding:11px 14px;font-family:var(--fs);font-size:.88rem;color:var(--ink);outline:none;width:100%;transition:border-color var(--r)}
+.pfinp:focus{border-color:var(--wine)}
+.pfinp::placeholder{color:rgba(13,13,13,.3)}
+.pfinp-iv{background:rgba(232,228,220,.05);border:1px solid var(--line2);padding:11px 14px;font-family:var(--fs);font-size:.82rem;color:rgba(232,228,220,.8);outline:none;width:100%;transition:border-color var(--r)}
+.pfinp-iv:focus{border-color:var(--gold)}
+.pfinp-iv::placeholder{color:var(--stone3)}
+textarea.pfinp,textarea.pfinp-iv{resize:vertical;min-height:88px}
+.pcontacts{display:flex;flex-direction:column;gap:16px;margin-top:28px}
+.pci{padding-bottom:16px;border-bottom:1px solid var(--line-c)}
+.pci:last-child{border-bottom:none}
+.pcil{font-family:var(--fm);font-size:.44rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.pciv{font-family:var(--fd);font-style:italic;font-size:1rem;color:var(--bone)}
+.pcis{font-family:var(--fs);font-size:.78rem;color:var(--dust);margin-top:3px;line-height:1.8}
+@media(max-width:900px){.psplit{grid-template-columns:1fr}.pleft,.pright{padding:70px 32px}}
+
+/* FOOTER */
+footer{background:var(--olive-dk);border-top:1px solid var(--line-c);padding:52px 48px 28px}
+.fi{max-width:var(--sw);margin:0 auto}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;padding-bottom:36px;border-bottom:1px solid var(--line-c);margin-bottom:24px}
+.flogo{font-family:var(--fd);font-style:italic;font-size:1.4rem;font-weight:300;color:var(--bone);margin-bottom:10px;letter-spacing:.04em}
+.fdesc{font-family:var(--fs);font-size:.78rem;color:rgba(232,228,220,.3);line-height:1.9}
+.fcolh{font-family:var(--fm);font-size:.44rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(232,228,220,.18);margin-bottom:12px}
+.fcol a{display:block;font-family:var(--fd);font-style:italic;font-size:.88rem;color:rgba(232,228,220,.28);text-decoration:none;margin-bottom:7px;transition:color var(--r)}
+.fcol a:hover{color:var(--gold)}
+.fbot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fcopy,.fkuro{font-family:var(--fm);font-size:.44rem;letter-spacing:.1em;color:rgba(232,228,220,.18)}
+.fkuro{text-decoration:none;text-transform:uppercase;transition:color var(--r)}
+.fkuro:hover{color:var(--gold)}
+@media(max-width:900px){.ftop{grid-template-columns:1fr 1fr;gap:28px}.sec{padding:80px 24px}}
+@media(max-width:480px){.ftop{grid-template-columns:1fr}.fbot{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div id="cur-h"></div><div id="cur-v"></div><div id="cur-dot"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ll">// initialising mia_khalifa.build</div>
+  <div class="ll">Sarah Joe Chamoun · Beirut, 1993 → Miami, 2025</div>
+  <div class="ll">Sheytan · KNWLS · Vogue India · Oxford Union · BBC</div>
+  <div class="ll-name">Mia Khalifa</div>
+  <div class="lbar"><div class="lbar-f" id="lf"></div></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nl">Mia <em>K.</em></a>
+  <ul class="nls">
+    <li><a href="#origin">Story</a></li>
+    <li><a href="#fashion">Fashion</a></li>
+    <li><a href="#sheytan">Sheytan</a></li>
+    <li><a href="#interviews">Interviews</a></li>
+    <li><a href="#activism">Activism</a></li>
+    <li><a href="#press">Press</a></li>
+  </ul>
+  <a href="#partner" class="ncta">Work Together</a>
+  <button class="ham" id="hbtn"><span></span><span></span><span></span></button>
+</nav>
+<div id="mob">
+  <a href="#origin"     onclick="document.getElementById('mob').classList.remove('open')">Story</a>
+  <a href="#fashion"    onclick="document.getElementById('mob').classList.remove('open')">Fashion</a>
+  <a href="#sheytan"    onclick="document.getElementById('mob').classList.remove('open')">Sheytan</a>
+  <a href="#interviews" onclick="document.getElementById('mob').classList.remove('open')">Interviews</a>
+  <a href="#activism"   onclick="document.getElementById('mob').classList.remove('open')">Activism</a>
+  <a href="#partner"    onclick="document.getElementById('mob').classList.remove('open')">Work Together ↗</a>
+</div>
+
+<!-- ═══════════ HERO — THE LINE ═══════════ -->
+<section id="hero">
+  <div class="hero-portrait">
+    <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Hero.webp"
+      alt="Mia Khalifa"
+      onerror="this.src='https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/About.webp'"/>
+  </div>
+  <div class="hero-line"></div>
+
+  <div class="hero-split">
+    <!-- LEFT — what happened TO her -->
+    <div class="hero-left">
+      <div class="hero-before-label">What happened to her</div>
+      <div class="hero-before-facts">
+        <div class="hbf"><span class="hbf-yr">2001</span><span class="hbf-t">Left Lebanon as a refugee. Post-9/11 bullying in Maryland.</span></div>
+        <div class="hbf"><span class="hbf-yr">2014</span><span class="hbf-t">3 months. $12,000. Videos she can't take down.</span></div>
+        <div class="hbf"><span class="hbf-yr">2015</span><span class="hbf-t">ISIS death threats. Parents disown her publicly.</span></div>
+        <div class="hbf"><span class="hbf-yr">2015</span><span class="hbf-t">#1 on Pornhub — a year after she stopped performing.</span></div>
+        <div class="hbf"><span class="hbf-yr">2018</span><span class="hbf-t">#1 again. Still. Without her consent. Still earning nothing.</span></div>
+      </div>
+      <div class="hero-h1-left">Before.</div>
+    </div>
+
+    <!-- RIGHT — what she built -->
+    <div class="hero-right">
+      <div class="hero-after-label">What she built after</div>
+      <div class="hero-after-facts">
+        <div class="haf"><span class="haf-yr">2023</span><span class="haf-t">Sheytan jewelry. Sells out in 24 hours.</span></div>
+        <div class="haf"><span class="haf-yr">2023</span><span class="haf-t">KNWLS SS24. Closes the show. London Fashion Week.</span></div>
+        <div class="haf"><span class="haf-yr">2024</span><span class="haf-t">Vogue India cover. "The Reinvention of Mia Khalifa."</span></div>
+        <div class="haf"><span class="haf-yr">2024</span><span class="haf-t">$7.6M earned media value — one fashion season.</span></div>
+        <div class="haf"><span class="haf-yr">2026</span><span class="haf-t">Trashy Clothing × Sheytan, Paris. Institut du Monde Arabe.</span></div>
+      </div>
+      <h1 class="hero-h1-right">After <em>her.</em></h1>
+    </div>
+  </div>
+
+  <div class="hero-stats rv">
+    <div class="hst"><div class="hstv"><em>28</em>M+</div><div class="hstl">Instagram · @miakhalifa</div></div>
+    <div class="hst"><div class="hstv"><em>41</em>M+</div><div class="hstl">TikTok · 709M+ Likes</div></div>
+    <div class="hst"><div class="hstv"><em>6</em>M+</div><div class="hstl">Twitter / X</div></div>
+    <div class="hst"><div class="hstv"><em>$7.6</em>M</div><div class="hstl">Earned Media Value · AW23 Season Alone</div></div>
+    <div class="hst"><div class="hstv"><em>1.8</em>M</div><div class="hstl">Petition Signatures to Remove Videos</div></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ttrack">
+    <span class="ti">Sarah Joe Chamoun · Beirut, Lebanon · February 10, 1993<span class="tsep">✦</span></span>
+    <span class="ti">BA History · University of Texas at El Paso<span class="tsep">✦</span></span>
+    <span class="ti">Sheytan — Jewelry Founder · With Sara Burn (ex-Virgil Abloh / YEEZY)<span class="tsep">✦</span></span>
+    <span class="ti">KNWLS SS24 · Di Petsa AW25 · Dominnico 2025 · Trashy × Sheytan AW26 Paris<span class="tsep">✦</span></span>
+    <span class="ti">Vogue India Cover · "The Reinvention of Mia Khalifa" · Jan/Feb 2024<span class="tsep">✦</span></span>
+    <span class="ti">Oxford Union · BBC HARDtalk · Diary of a CEO<span class="tsep">✦</span></span>
+    <span class="ti">Hulu Ramy · Bella Poarch Build a Bitch · Out of Bounds with Gilbert Arenas<span class="tsep">✦</span></span>
+    <span class="ti">Lebanon 🇱🇧 · Immigrant · Not Malala · Inquiries@myotis.co<span class="tsep">✦</span></span>
+    <span class="ti">$7.6M Earned Media Value AW23 · Surpassed Zendaya & Kylie Jenner<span class="tsep">✦</span></span>
+    <span class="ti">1.8M Petition Signatures · Digital Rights Advocate · Sex Worker Advocate<span class="tsep">✦</span></span>
+    <span class="ti">Sarah Joe Chamoun · Beirut, Lebanon · February 10, 1993<span class="tsep">✦</span></span>
+    <span class="ti">BA History · University of Texas at El Paso<span class="tsep">✦</span></span>
+    <span class="ti">Sheytan — Jewelry Founder · With Sara Burn (ex-Virgil Abloh / YEEZY)<span class="tsep">✦</span></span>
+    <span class="ti">KNWLS SS24 · Di Petsa AW25 · Dominnico 2025 · Trashy × Sheytan AW26 Paris<span class="tsep">✦</span></span>
+    <span class="ti">Vogue India Cover · "The Reinvention of Mia Khalifa" · Jan/Feb 2024<span class="tsep">✦</span></span>
+    <span class="ti">Oxford Union · BBC HARDtalk · Diary of a CEO<span class="tsep">✦</span></span>
+    <span class="ti">Hulu Ramy · Bella Poarch Build a Bitch · Out of Bounds with Gilbert Arenas<span class="tsep">✦</span></span>
+    <span class="ti">Lebanon 🇱🇧 · Immigrant · Not Malala · Inquiries@myotis.co<span class="tsep">✦</span></span>
+    <span class="ti">$7.6M Earned Media Value AW23 · Surpassed Zendaya & Kylie Jenner<span class="tsep">✦</span></span>
+    <span class="ti">1.8M Petition Signatures · Digital Rights Advocate · Sex Worker Advocate<span class="tsep">✦</span></span>
+  </div>
+</div>
+
+<!-- ═══════════ ORIGIN ═══════════ -->
+<section id="origin" class="sec sec-stone">
+  <div class="sw">
+    <div class="ori-grid">
+      <div class="rvl">
+        <div class="ori-img-main">
+          <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Library.jpg"
+            alt="Mia Khalifa Library"
+            onerror="this.src='https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/About.webp'"/>
+          <div class="ori-cap">
+            <span class="orc-n">Mia Khalifa</span>
+            <span class="orc-m">BA History · Journalist · Founder</span>
+          </div>
+        </div>
+        <div class="ori-img-duo" style="margin-top:8px">
+          <div class="ori-img-sm">
+            <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Ballerina.jpg"
+              alt="Mia Khalifa"
+              onerror="this.style.background='#242424'"/>
+          </div>
+          <div class="ori-img-sm">
+            <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Red%20Jacket.jpg"
+              alt="Mia Khalifa Red Jacket"
+              onerror="this.style.background='#1E1E1E'"/>
+          </div>
+        </div>
+      </div>
+      <div class="ori-right rvr">
+        <div class="kk kk-g">The Origin File</div>
+        <h2 class="tt" style="margin-bottom:28px">She became<br/>famous before<br/>she had <em>control.</em></h2>
+        <div class="pq">"I was just walking across the street. This guy stops, gets out of his car, gives me his card. I thought about it for about two weeks. <em>Then I made the mistake of saying yes.</em>"</div>
+        <div class="otl">
+          <div class="tli"><div class="tly">1993</div><div class="tld"></div><div><div class="tlh">Born Sarah Joe Chamoun · Beirut, Lebanon</div><div class="tlb">Born into a Lebanese Maronite Catholic family during an era of conflict. French private school education. Arabic at home. Two languages, two worlds — a tension that defines everything that follows.</div></div></div>
+          <div class="tli"><div class="tly">2001</div><div class="tld"></div><div><div class="tlh">Family arrives in Montgomery County, Maryland</div><div class="tlb">Age eight. Post-9/11 America. The darkest girl in school, wearing goth clothes, playing lacrosse. <strong>Bullied. The outsider.</strong> Massanutten Military Academy follows — structure, discipline, survival.</div></div></div>
+          <div class="tli"><div class="tly">2013</div><div class="tld"></div><div><div class="tlh">BA in History · University of Texas at El Paso</div><div class="tlb">Works as a bartender, a model, a briefcase girl on a Spanish-language game show to fund it. Graduates. The degree is real. <strong>The history degree is not an accident — she studies power, narrative, and who controls it.</strong></div></div></div>
+          <div class="tli"><div class="tly">2014</div><div class="tld"></div><div><div class="tlh">3 months · Bang Bros · The hijab scene · The end</div><div class="tlb">October 2014. A producer on a street. Three months. The hijab scene with Julianna Vega goes viral. Within weeks: the most-searched performer on Pornhub globally. <strong>ISIS death threats with a digitally manipulated beheading image.</strong> Parents publicly disown her. She fires back at Lebanese media within hours. Exits the industry.</div></div></div>
+          <div class="tli"><div class="tly">2015</div><div class="tld"></div><div><div class="tlh">#1 on Pornhub · $12,000 · Videos that won't come down</div><div class="tlb">Voted #1 most-searched performer — a year after she stopped. <strong>Claimed $12,000 total earned.</strong> Bang Bros disputes this, claiming $178,000+ across all companies. She has no residuals. The videos keep circulating. The money keeps flowing — to everyone except her.</div></div></div>
+          <div class="tli"><div class="tly">2015–19</div><div class="tld"></div><div><div class="tlh">Paralegal · Bookkeeper · Rebuilding from nothing</div><div class="tlb">Leaves the spotlight entirely. Works as a paralegal and bookkeeper in Miami while the internet debates her identity without her consent. <strong>She is doing paperwork in an office while becoming one of the most searched names in internet history.</strong></div></div></div>
+          <div class="tli"><div class="tly">2023</div><div class="tld"></div><div><div class="tlh">Vogue India · KNWLS runway · Sheytan · Oxford Union</div><div class="tlb">The reinvention is not sudden — it has been a decade of deliberate building. In 2023 it all becomes undeniable simultaneously. Fashion. Jewelry. Academia. Media. <em>The story is now hers to tell.</em></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ THE RECKONING ═══════════ -->
+<section id="reckoning" class="sec sec-wine">
+  <div class="sw">
+    <div class="rec-grid rv">
+      <div>
+        <div class="kk kk-b">The Numbers That Don't Add Up</div>
+        <div class="rec-num">$12K</div>
+        <div class="rec-stat">$12,<em>000.</em></div>
+        <p class="rec-label">Her claim: total earned in 3 months · Bang Bros counter-claim: $178,000+ across all companies · Her royalties since: $0 · Videos still online: yes · Years fighting removal: 10+</p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#interviews" class="bt-ghost">Hear her tell it →</a>
+        </div>
+      </div>
+      <div class="rec-cards">
+        <div class="rcc"><div class="rcc-l">The $12,000 Controversy</div><div class="rcc-v">She received approximately <strong>$12,000</strong> directly from Bang Bros. Bang Bros claims they paid $178,000+ total across all companies she worked with. Both figures may be accurate simultaneously — she received $12K from one company. The broader ecosystem's earnings from her content: estimated in the millions, over a decade, continuing today. Her residuals: zero.</div></div>
+        <div class="rcc"><div class="rcc-l">The Petition — 1.8M Signatures</div><div class="rcc-v">Over <strong>1.8 million people signed</strong> a petition calling for the removal of her videos from major platforms. This is not a fringe effort — it is a mass civil rights moment for performer digital rights. The platforms have largely declined to act. The videos remain.</div></div>
+        <div class="rcc"><div class="rcc-l">#1 in 2015. #1 Again in 2018.</div><div class="rcc-v">Voted the most-searched performer on Pornhub in 2015 — a year after leaving. Most-searched again in 2018 — <strong>three years after leaving.</strong> xHamster reported her as most-searched of 2016. The system generates value from her image indefinitely. She generates nothing from that value.</div></div>
+        <div class="rcc"><div class="rcc-l">What she has said about it</div><div class="rcc-v">"I can't even mentally get past somebody wanting to be with me for the novelty. So I'd much rather just be alone." — The Adam Friedland Show, 2026. <strong>The personal cost is not abstract. It is a decade of isolation, distrust, and rebuilding.</strong></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FASHION ═══════════ -->
+<section id="fashion" class="sec sec-stone2">
+  <div class="sw">
+    <div class="fash-intro rv">
+      <div>
+        <div class="kk kk-g">The Fashion Chapter</div>
+        <h2 class="ttsm">She doesn't<br/>do cameos.<br/>She <em>closes shows.</em></h2>
+      </div>
+      <p class="bb">In AW23 alone her fashion presence generated $7.6M in earned media value — surpassing Zendaya and Kylie Jenner that circuit. She opens and closes shows. She has a Vogue India cover. She has a photo book. She is not a guest of the industry — she is a force within it.</p>
+    </div>
+    <div class="runway-grid rv">
+      <div class="rg-card tall">
+        <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Runway.webp"
+          alt="Mia Khalifa Runway"
+          onerror="this.src='https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Vogue%20India.webp'"/>
+        <div class="rg-label">KNWLS SS24 · Closes the Show · London</div>
+      </div>
+      <div class="rg-card sq">
+        <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Vogue%20India.webp"
+          alt="Vogue India"
+          onerror="this.src='https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%201.webp'"/>
+        <div class="rg-label">Vogue India Cover · Jan/Feb 2024</div>
+      </div>
+      <div class="rg-card sq">
+        <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%201.webp"
+          alt="Mia Vogue 1"
+          onerror="this.src='https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%202.webp'"/>
+        <div class="rg-label">Editorial · "The Reinvention"</div>
+      </div>
+      <div class="rg-card sq">
+        <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Barnyard.jpg"
+          alt="Barnyard Marc Jacobs"
+          onerror="this.src='https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%203.webp'"/>
+        <div class="rg-label">Marc Jacobs Heaven Campaign · Barnyard</div>
+      </div>
+      <div class="rg-card sq">
+        <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%202.webp"
+          alt="Mia Vogue 2"
+          onerror="this.src='https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%204.webp'"/>
+        <div class="rg-label">Aries FW23 · "Mia by Aries" Photo Book</div>
+      </div>
+    </div>
+    <div class="runway-list rv">
+      <div class="rl"><div class="rl-num">01</div><div class="rl-brand">KNWLS</div><div class="rl-season">SS24 · London Fashion Week · Closes the show</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">02</div><div class="rl-brand">Di Petsa</div><div class="rl-season">AW25 · London Fashion Week</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">03</div><div class="rl-brand">Dominnico</div><div class="rl-season">2025 · 080 Barcelona · Opens AND closes</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">04</div><div class="rl-brand">Trashy Clothing × Sheytan</div><div class="rl-season">AW26 · Paris · Institut du Monde Arabe · March 2026</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">05</div><div class="rl-brand">Aries</div><div class="rl-season">FW23 Campaign + "Mia by Aries" Photo Book</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">06</div><div class="rl-brand">Marc Jacobs Heaven</div><div class="rl-season">Campaign · Barnyard shoot</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">07</div><div class="rl-brand">Shoreditch Ski Club</div><div class="rl-season">Summer Campaign</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">08</div><div class="rl-brand">Mugler · Acne Studios · Yohji Yamamoto</div><div class="rl-season">Front Row · Paris Fashion Week</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">09</div><div class="rl-brand">Casablanca PFW SS26</div><div class="rl-season">Front Row — alongside Wisdom Kaye</div><div class="rl-dot"></div></div>
+      <div class="rl"><div class="rl-num">10</div><div class="rl-brand">Willy Chavarria · Dsquared2 · GCDS</div><div class="rl-season">Paris &amp; Milan · 2024–2026</div><div class="rl-dot"></div></div>
+    </div>
+    <div class="emv-bar rv">
+      <div class="emv-left">
+        <div class="emv-val">$<em>7.6</em>M</div>
+        <div class="emv-label">Earned Media Value · AW23 Fashion Circuit Alone</div>
+      </div>
+      <p class="emv-note"><strong>Surpassed Zendaya and Kylie Jenner</strong> in fashion week earned media value during the AW23 circuit, according to Lefty data platform. She is not a celebrity attending fashion shows — she is a commercial and cultural force within the industry.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SHEYTAN ═══════════ -->
+<section id="sheytan" class="sec sec-ink">
+  <div class="sw">
+    <div class="shey-grid">
+      <div class="rvl">
+        <div class="kk kk-g">Her Label</div>
+        <div class="shey-arabic">شيطان</div>
+        <div class="shey-name">Sheytan.</div>
+        <div class="shey-sub">Arabic for "devil" · Founded 2023 · Co-created with Sara Burn (ex-Virgil Abloh / YEEZY) · Sold out in 24 hours</div>
+        <p class="bb" style="max-width:460px">The name is the statement. Sheytan — the Arabic word for devil — worn by a Lebanese immigrant woman at Paris Fashion Week, at the Institut du Monde Arabe, in collaboration with a Palestinian label. Every piece of Sheytan jewelry is a provocation with perfect context.</p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://sheytan.world" target="_blank" class="bt-gold">Sheytan World →</a>
+          <a href="#partner" class="bt-ghost">Collaboration Enquiry</a>
+        </div>
+        <div class="shey-img" style="margin-top:28px">
+          <img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Boxer%20gloves.jpg"
+            alt="Mia Khalifa Boxer Gloves"
+            onerror="this.src='https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20boxer%20gloves%202.jpg'"/>
+        </div>
+      </div>
+      <div class="rvr shey-right">
+        <div class="sc">
+          <div class="sc-h">The Name Is the Manifesto</div>
+          <p class="sc-b">In Arabic, Sheytan means devil. For a Lebanese Maronite Catholic immigrant who has spent ten years being demonised by media, governments, religious institutions and the internet simultaneously — <strong>the name is not a provocation. It is an autobiography.</strong></p>
+        </div>
+        <div class="sc">
+          <div class="sc-h">Sara Burn — Former Virgil Abloh / YEEZY</div>
+          <p class="sc-b">Co-founded with Sara Burn, whose CV includes collaborations with Virgil Abloh and YEEZY. <strong>This is not a celebrity vanity project.</strong> It is a properly architected label with a co-founder whose credentials are in the serious end of fashion design.</p>
+        </div>
+        <div class="sc">
+          <div class="sc-h">Trashy Clothing × Sheytan · AW26 · Paris</div>
+          <p class="sc-b">March 2026. Institut du Monde Arabe, Paris. The first-ever Trashy Clothing runway — a Palestinian label. Sheytan provides the jewelry: sword-inspired gold body pieces. <strong>"Sword forms repeat across the body, joining as one. Structure and protection."</strong> The collaboration is explicitly political, worn explicitly on purpose, in the most precise venue possible.</p>
+        </div>
+        <div class="sc">
+          <div class="sc-h">Sold Out in 24 Hours</div>
+          <p class="sc-b">The first Sheytan drop sold out within 24 hours of launch in June 2023. <strong>The audience was already there</strong> — 65 million people across platforms, waiting for something to spend on. The jewelry is the first owned product of the brand. It will not be the last.</p>
+        </div>
+        <div class="sc">
+          <div class="sc-h">Aries — "She Is My Muse"</div>
+          <p class="sc-b">Aries founder Sofia Prantera on working with her: "I felt immediately inspired by Mia's punk attitude. She is strong but extremely humble. Under her glossy appearance there is a tough young girl who has had to fight her way through so much adversity. <strong>I wanted to capture her wild spirit — raw and unpolished.</strong>" The result: a full campaign and a photo book titled "Mia by Aries."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ INTERVIEWS ═══════════ -->
+<section id="interviews" class="sec sec-stone">
+  <div class="sw">
+    <div class="int-intro rv">
+      <div>
+        <div class="kk kk-g">In Her Own Words</div>
+        <h2 class="ttsm">The BBC. Oxford<br/>Union. Diary of<br/>a CEO. <em>Her words.</em></h2>
+      </div>
+      <p class="bb">She has been interviewed by Stephen Sackur at the BBC — the same programme that interviews heads of state. She has addressed the Oxford Union — the same stage as Nelson Mandela and Ronald Reagan. She has sat with Steven Bartlett. She has been the subject of "I Spent a Day With" long-form documentary content. This is not what the internet thinks she does with her time.</p>
+    </div>
+
+    <div class="vid-grid rv">
+      <!-- 1 — BBC HARDtalk — most important -->
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/RwTAgom_VX8/maxresdefault.jpg" alt="BBC HARDtalk"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+          <div class="vc-label">BBC HARDtalk</div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">BBC News · Stephen Sackur · 2019</div>
+          <div class="vc-title">"Why I'm Speaking Out About the Porn Industry"</div>
+          <p class="vc-desc">The most significant interview she has given. Sackur interviews heads of state on HARDtalk. The porn industry, digital rights, performer exploitation, and what happens when a 21-year-old makes a decision the internet never lets her unmake. Watch this one first.</p>
+        </div>
+      </div>
+
+      <!-- 2 — Diary of a CEO -->
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/igkv5JDgduA/maxresdefault.jpg" alt="Diary of a CEO"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+          <div class="vc-label">Diary of a CEO</div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">Steven Bartlett · DOAC · May 2023</div>
+          <div class="vc-title">"Opens Up About The Dark Side of the Adult Entertainment Industry"</div>
+          <p class="vc-desc">Steven Bartlett's guests include CEOs, athletes and cultural architects. She sits at the same table and talks about exploitation, identity, and what it took to rebuild. One of the most widely shared versions of her story.</p>
+        </div>
+      </div>
+
+      <!-- 3 — Oxford Union -->
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/i2qplvJ6SLs/maxresdefault.jpg" alt="Oxford Union"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+          <div class="vc-label">Oxford Union</div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">The Oxford Union · Oxford University</div>
+          <div class="vc-title">Oxford Union Address</div>
+          <p class="vc-desc">The Oxford Union has hosted Nelson Mandela, Ronald Reagan, Mother Teresa, the Dalai Lama, and Stephen Hawking. It also hosted Mia Khalifa. She spoke. The room listened. The History degree was not a coincidence.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="shorts-row rv" style="margin-top:1px">
+      <!-- 4 — I Spent a Day With -->
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/zP04Nb_lesI/maxresdefault.jpg" alt="I Spent a Day With"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+          <div class="vc-label">Documentary Profile</div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">YouTube Documentary · Trending Multiple Countries</div>
+          <div class="vc-title">"I Spent a Day With Mia Khalifa"</div>
+          <p class="vc-desc">Long-form documentary-style profile. Trended #19 Norway, #37 Denmark, #50 Finland. The person revealed in an unscripted day is not the person the tabloids describe.</p>
+        </div>
+      </div>
+
+      <!-- 5 — Milan FW Prep -->
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/BXmp3gmwUHM/maxresdefault.jpg" alt="Milan Fashion Week"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+          <div class="vc-label">Milan Fashion Week</div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">Mia Khalifa Official YouTube · Spanish</div>
+          <div class="vc-title">Preparing for Milan Fashion Week AW24</div>
+          <p class="vc-desc">Behind-the-scenes of her Milan Fashion Week preparation — styling, shows, the full circuit. For those who still think this is a phase: it's not. The fashion career is a decade-long sustained commitment.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional videos row -->
+    <div class="vid-grid rv" style="margin-top:1px">
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/SlaEaN2sm14/maxresdefault.jpg" alt="Mia Khalifa"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">YouTube · Long Form</div>
+          <div class="vc-title">Mia Khalifa — Extended Interview</div>
+          <p class="vc-desc">Further extended conversation covering her life, perspective and current projects in her own voice.</p>
+        </div>
+      </div>
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/2ome1SVK5Cs/maxresdefault.jpg" alt="Mia Khalifa"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">YouTube · Documentary</div>
+          <div class="vc-title">Mia Khalifa — The Full Story</div>
+          <p class="vc-desc">Long-form documentary coverage. The complete arc from Beirut to Miami, from behind-the-camera to front row at Paris Fashion Week.</p>
+        </div>
+      </div>
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/3w-C0-zVaW8/maxresdefault.jpg" alt="iLoveFriday Mia Khalifa"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+          <div class="vc-label">Cultural Artifact</div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">iLoveFriday · 2018 · Columbia Records</div>
+          <div class="vc-title">"Mia Khalifa" (TikTok Anthem) — iLoveFriday</div>
+          <p class="vc-desc">The diss track that accidentally created TikTok culture. Based on a fake screenshot. She was the subject, not the participant. 865M TikTok views. She called it harmful. Then kept building anyway. The song exists; the person it couldn't stop also exists.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shorts -->
+    <div class="shorts-row rv" style="margin-top:1px">
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/B3LpaMSrxbs/maxresdefault.jpg" alt="Short"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+          <div class="vc-label">Short</div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">YouTube Shorts</div>
+          <div class="vc-title">Mia Khalifa — Short Form</div>
+          <p class="vc-desc">Short-form content from her YouTube channel — fashion, commentary and daily voice.</p>
+        </div>
+      </div>
+      <div class="vc">
+        <div class="vc-thumb">
+          <img src="https://img.youtube.com/vi/N5eseSeExDc/maxresdefault.jpg" alt="Short"/>
+          <div class="vc-play"><div class="vc-btn"></div></div>
+          <div class="vc-label">Short</div>
+        </div>
+        <div class="vc-info">
+          <div class="vc-pub">YouTube Shorts</div>
+          <div class="vc-title">Mia Khalifa — Short Form</div>
+          <p class="vc-desc">Short-form content — unfiltered, direct, exactly what 65 million people follow her for.</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-family:var(--fm);font-size:.44rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone3);text-align:center;margin-top:20px">← Hover over video to preview · Click to watch on YouTube →</p>
+  </div>
+</section>
+
+<!-- ═══════════ GALLERY ═══════════ -->
+<section id="gallery" style="background:var(--ink);padding:80px 0;overflow:hidden">
+  <div style="max-width:var(--sw);margin:0 auto 36px;padding:0 48px;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:16px" class="rv">
+    <div>
+      <div class="kk kk-g">Editorial Archive</div>
+      <h2 class="ttsm">A decade of<br/><em>reclaiming the frame.</em></h2>
+    </div>
+    <p class="bb" style="max-width:400px">She was first photographed without her consent. She has spent a decade photographed entirely on her terms. The difference is in every image.</p>
+  </div>
+  <div class="gal-rows">
+    <div class="gal-row">
+      <div class="gt-a">
+        <div class="gc wd"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Vogue%20India.webp" alt="Vogue India"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%201.webp" alt="Vogue 1"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Library.jpg" alt="Library"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Red%20Jacket.jpg" alt="Red Jacket"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%202.webp" alt="Vogue 2"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Ballerina.jpg" alt="Ballerina"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Barnyard.jpg" alt="Barnyard"/></div>
+        <!-- dupe -->
+        <div class="gc wd"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Vogue%20India.webp" alt="Vogue India"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%201.webp" alt="Vogue 1"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Library.jpg" alt="Library"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Red%20Jacket.jpg" alt="Red Jacket"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%202.webp" alt="Vogue 2"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Ballerina.jpg" alt="Ballerina"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Barnyard.jpg" alt="Barnyard"/></div>
+      </div>
+    </div>
+    <div class="gal-row">
+      <div class="gt-b">
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%203.webp" alt="Vogue 3"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20dress.jpg" alt="Dress"/></div>
+        <div class="gc wd"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%204.webp" alt="Vogue 4"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Boxer%20gloves.jpg" alt="Boxer Gloves"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa8.jpg" alt="Mia 8"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa6.jpg" alt="Mia 6"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Black%20tee.jpeg" alt="Black Tee"/></div>
+        <!-- dupe -->
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%203.webp" alt="Vogue 3"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20dress.jpg" alt="Dress"/></div>
+        <div class="gc wd"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Vogue%204.webp" alt="Vogue 4"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa%20Boxer%20gloves.jpg" alt="Boxer Gloves"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa8.jpg" alt="Mia 8"/></div>
+        <div class="gc pt"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Mia%20Khalifa6.jpg" alt="Mia 6"/></div>
+        <div class="gc sq"><img src="https://raw.githubusercontent.com/middleAgedCoda/Mia-Khalifa-/main/Black%20tee.jpeg" alt="Black Tee"/></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ACTIVISM ═══════════ -->
+<section id="activism" class="sec sec-olive">
+  <div class="sw">
+    <div class="act-grid rv">
+      <div class="act-left">
+        <div class="kk kk-g">The Voice</div>
+        <div class="act-quote">"I don't do nudity past what I've done in a fashion magazine. I feel <em>secure.</em>"</div>
+        <div class="act-attr">— Mia Khalifa · The New York Times · 2024</div>
+        <p class="bb" style="margin-top:24px">She has the Lebanese National Anthem opening line tattooed on her body in Arabic. She has spent ten years as a vocal advocate for Palestine, Lebanon, sex workers' rights, and digital performer exploitation reform. She is not performing a rebrand. <strong>She is operating from a consistent set of convictions that predate the fame and survive it.</strong></p>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#interviews" class="bt-gold">Watch Her Speak →</a>
+        </div>
+      </div>
+      <div class="act-pillars">
+        <div class="ap"><div class="ap-icon">🇱🇧</div><div><div class="ap-h">Lebanon & Palestine</div><p class="ap-b">Lebanese National Anthem tattooed in Arabic. Lebanese Forces Cross tattooed. Lost brand deals after Oct 7th post. Has never walked back her position. <strong>The identity is not a performance — it is in her skin.</strong> When Beirut exploded in August 2020, she auctioned her iconic glasses for relief funds.</p></div></div>
+        <div class="ap"><div class="ap-icon">⚖️</div><div><div class="ap-h">Digital Performer Rights</div><p class="ap-b">1.8M petition signatures. A decade of advocacy for removal of content filmed without full informed consent. <strong>Her case has become the defining example</strong> of how the adult entertainment industry's contracts exploit performers — particularly young, financially precarious ones. She did not choose to make this her platform. It chose her.</p></div></div>
+        <div class="ap"><div class="ap-icon">🗣️</div><div><div class="ap-h">Sex Worker Rights</div><p class="ap-b">Has consistently advocated for the rights of sex workers since her exit from the industry — <strong>not despite having been one, but because of it.</strong> The distinction between exploitation and consent. The distinction between what the industry does to people versus what people choose to do.</p></div></div>
+        <div class="ap"><div class="ap-icon">🧠</div><div><div class="ap-h">Mental Health & Therapy</div><p class="ap-b">Openly discusses therapy and mental health. "I've been in two long-term relationships in the last ten years and that's it. I'd much rather just be alone." The isolation caused by her story is not something she conceals — <strong>she names it, documents it, and refuses to perform recovery she hasn't made.</strong></p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRESS ═══════════ -->
+<section id="press" class="sec sec-stone2">
+  <div class="sw">
+    <div class="rv" style="margin-bottom:8px">
+      <div class="kk kk-g">Press & Publications</div>
+      <div class="g2" style="align-items:end">
+        <h2 class="ttsm">A decade of<br/><em>being written about.</em><br/>Now writing it herself.</h2>
+        <p class="bb">From tabloid sensation in 2014 to Vogue India cover in 2024. The press coverage tracks an arc that the headlines never quite caught up to: a person becoming increasingly hard to mischaracterise.</p>
+      </div>
+    </div>
+    <div class="plscroll rv">
+      <div class="pltrack">
+        <div class="pllogo">Vogue India</div><div class="pllogo">BBC</div><div class="pllogo">The New York Times</div>
+        <div class="pllogo">Oxford Union</div><div class="pllogo">Hulu</div><div class="pllogo">Complex News</div>
+        <div class="pllogo">Rooster Teeth</div><div class="pllogo">Aries</div><div class="pllogo">KNWLS</div>
+        <div class="pllogo">Di Petsa</div><div class="pllogo">Marc Jacobs</div><div class="pllogo">Lefty Data</div>
+        <div class="pllogo">Vogue India</div><div class="pllogo">BBC</div><div class="pllogo">The New York Times</div>
+        <div class="pllogo">Oxford Union</div><div class="pllogo">Hulu</div><div class="pllogo">Complex News</div>
+        <div class="pllogo">Rooster Teeth</div><div class="pllogo">Aries</div><div class="pllogo">KNWLS</div>
+        <div class="pllogo">Di Petsa</div><div class="pllogo">Marc Jacobs</div><div class="pllogo">Lefty Data</div>
+      </div>
+    </div>
+    <div class="pcards rv">
+      <div class="pcard"><div class="ppub">Vogue India · January/February 2024</div><div class="phl">"The Reinvention of Mia Khalifa" — Cover Story</div><p class="pbdy">The cover of Vogue India. The headline "The Reinvention of Mia Khalifa." The fashion editor who framed the piece understood that the reinvention was not PR — it was documented. <strong>Every runway, every interview, every petition signature was the reinvention. Vogue just named it.</strong></p></div>
+      <div class="pcard"><div class="ppub">BBC HARDtalk · 2019 · Stephen Sackur</div><div class="phl">"Why I'm Speaking Out About the Porn Industry"</div><p class="pbdy">HARDtalk has interviewed Mikhail Gorbachev, Desmond Tutu, and Kofi Annan. It also interviewed Mia Khalifa. Sackur does not conduct lightweight interviews. <strong>She sat across from him for 30 minutes and held her own.</strong> The BA in History was not an accident.</p></div>
+      <div class="pcard"><div class="ppub">The New York Times · 2024</div><div class="phl">"I don't do nudity past what I've done in a fashion magazine. I feel secure."</div><p class="pbdy">The New York Times profiled her OnlyFans approach — no nudity, empowerment-first, on her terms. <strong>The distinction between her first experience of the industry and her current relationship with her own image</strong> is the entire story of the last decade in one sentence.</p></div>
+      <div class="pcard"><div class="ppub">Lefty Data Platform · AW23 Fashion Circuit</div><div class="phl">$7.6M Earned Media Value — Surpassed Zendaya & Kylie Jenner</div><p class="pbdy">Not a claim from a publicist. Data from Lefty, the fashion industry's leading earned media analytics platform. <strong>She generated more fashion week earned media value than Zendaya and Kylie Jenner</strong> in the same circuit. The industry noticed before the press did.</p></div>
+      <div class="pcard"><div class="ppub">Aries · FW23 Campaign · "Mia by Aries"</div><div class="phl">"I felt immediately inspired by her punk attitude. Raw and unpolished." — Sofia Prantera</div><p class="pbdy">The founder of Aries, one of London's most credible labels, names her as a muse — not a brand deal, a muse — and produces a physical photo book in her name. <strong>"Mia by Aries" exists as a permanent object.</strong> Objects outlast press cycles.</p></div>
+      <div class="pcard"><div class="ppub">Adam Friedland Show · 2026 · Recent</div><div class="phl">"I'd much rather just be alone."</div><p class="pbdy">Her most recent major interview, March 2026. She explains how the 2014 video has limited her ability to trust intimate partners for a decade. <strong>The honesty is not a strategy.</strong> It is the same directness that makes her impossible to dismiss, and impossible to define from the outside.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PARTNER ═══════════ -->
+<section id="partner">
+  <div class="psplit">
+    <div class="pleft rvl">
+      <div class="kk kk-ink">Work Together</div>
+      <h2 style="font-family:var(--fd);font-size:clamp(2.2rem,4vw,3.8rem);font-weight:400;color:var(--ink);line-height:.92;margin-bottom:20px">Brand<br/><em style="font-style:italic;color:var(--wine)">Partnerships.</em></h2>
+      <p class="bb-dk" style="margin-bottom:28px">28M Instagram. 41M TikTok. 6M Twitter. $7.6M earned media value in one season. She is a Vogue India cover, an Oxford Union address, and a sold-out jewelry brand simultaneously. Every partnership reaches an audience that cannot be bought on any other platform.</p>
+      <div class="pform">
+        <div style="display:flex;flex-direction:column;gap:5px"><label class="pflbl">Brand / Company Name</label><input class="pfinp" type="text" placeholder="Your brand"/></div>
+        <div style="display:flex;flex-direction:column;gap:5px"><label class="pflbl">Contact Name &amp; Email</label><input class="pfinp" type="email" placeholder="name@brand.com"/></div>
+        <div style="display:flex;flex-direction:column;gap:5px">
+          <label class="pflbl">Partnership Type</label>
+          <select class="pfinp" style="cursor:none">
+            <option>Select...</option>
+            <option>Brand Campaign / Endorsement</option>
+            <option>Fashion / Runway</option>
+            <option>Sheytan Jewelry Collaboration</option>
+            <option>Content Creation</option>
+            <option>Speaking / Keynote</option>
+            <option>Media / Podcast / Interview</option>
+            <option>Film / Television</option>
+            <option>Activism / Advocacy Partnership</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px"><label class="pflbl">Tell me about the project</label><textarea class="pfinp" style="resize:vertical;min-height:88px" placeholder="Budget, timeline, vision..."></textarea></div>
+        <button class="bt-dk" style="cursor:none;border:none;text-align:center">Submit Enquiry →</button>
+      </div>
+    </div>
+    <div class="pright rvr">
+      <div class="kk kk-g">Contact</div>
+      <h2 style="font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:400;color:var(--bone);line-height:.92;margin-bottom:28px">Get in<br/><em style="font-style:italic;color:var(--gold)">touch.</em></h2>
+      <div class="pcontacts">
+        <div class="pci"><div class="pcil">General Enquiries</div><div class="pciv">Inquiries@myotis.co</div><div class="pcis">Official business enquiry email as listed in her Instagram bio. Brand partnerships, media, collaboration, speaking engagements.</div></div>
+        <div class="pci"><div class="pcil">Instagram</div><div class="pciv">@miakhalifa · 28M+</div><div class="pcis">Primary platform. High discourse engagement. Brand partnership enquiries via myotis.co.</div></div>
+        <div class="pci"><div class="pcil">Sheytan Jewelry</div><div class="pciv">sheytan.world</div><div class="pcis">Her owned label. Collaboration, wholesale, and creative partnership enquiries. Co-founded with Sara Burn (ex-Virgil Abloh / YEEZY).</div></div>
+        <div class="pci"><div class="pcil">TikTok</div><div class="pciv">@miakhalifa · 41M · 709M Likes</div><div class="pcis">Highest-reach platform. 709 million total likes. Brand integration reaches a global audience that no other creator at this scale provides access to.</div></div>
+      </div>
+      <div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:10px">
+        <a href="https://www.instagram.com/miakhalifa" target="_blank" class="bt-ghost">Instagram ↗</a>
+        <a href="https://www.tiktok.com/@miakhalifa" target="_blank" class="bt-ghost">TikTok ↗</a>
+        <a href="https://sheytan.world" target="_blank" class="bt-gold">Sheytan →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fi">
+    <div class="ftop">
+      <div>
+        <div class="flogo">Mia Khalifa</div>
+        <p class="fdesc">Sarah Joe Chamoun. Born Beirut, Lebanon, February 10, 1993. BA History, University of Texas at El Paso. Founder: Sheytan jewelry (with Sara Burn, ex-Virgil Abloh/YEEZY). KNWLS, Di Petsa, Dominnico, Trashy Clothing × Sheytan AW26. Vogue India cover. Oxford Union. BBC HARDtalk. $7.6M earned media value, AW23. 65M+ across platforms. Lebanese-American. Immigrant. Not Malala.</p>
+      </div>
+      <div class="fcol">
+        <div class="fcolh">Navigate</div>
+        <a href="#origin">The Story</a>
+        <a href="#reckoning">The Reckoning</a>
+        <a href="#fashion">Fashion</a>
+        <a href="#sheytan">Sheytan</a>
+        <a href="#interviews">Interviews</a>
+        <a href="#activism">Activism</a>
+      </div>
+      <div class="fcol">
+        <div class="fcolh">Fashion</div>
+        <a href="#fashion">KNWLS SS24</a>
+        <a href="#fashion">Vogue India Cover</a>
+        <a href="#fashion">Trashy × Sheytan AW26</a>
+        <a href="#fashion">Aries + Photo Book</a>
+        <a href="#fashion">Marc Jacobs Heaven</a>
+      </div>
+      <div class="fcol">
+        <div class="fcolh">Connect</div>
+        <a href="https://www.instagram.com/miakhalifa" target="_blank">Instagram ↗</a>
+        <a href="https://www.tiktok.com/@miakhalifa" target="_blank">TikTok ↗</a>
+        <a href="https://twitter.com/miakhalifa" target="_blank">Twitter / X ↗</a>
+        <a href="https://sheytan.world" target="_blank">Sheytan.World ↗</a>
+        <a href="#partner">Partner Enquiry</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">© 2025 Mia Khalifa · Miami, FL · All rights reserved. · Inquiries@myotis.co</div>
+      <a href="https://kuro-digital-acid-lime.onrender.com/" target="_blank" class="fkuro">Site by Kuro Digital ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* LOADER */
+(function(){
+  const f=document.getElementById('lf'),l=document.getElementById('loader');
+  if(!f||!l)return;
+  let w=0;
+  const iv=setInterval(()=>{
+    w+=Math.random()*9+4;
+    if(w>=100){w=100;clearInterval(iv);}
+    f.style.width=w+'%';
+    if(w>=100)setTimeout(()=>l.classList.add('out'),1400);
+  },150);
+})();
+
+/* CROSSHAIR CURSOR */
+(function(){
+  const ch=document.getElementById('cur-h'),cv=document.getElementById('cur-v'),cd=document.getElementById('cur-dot');
+  if(!ch||!cv||!cd)return;
+  let mx=0,my=0,dx=0,dy=0;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+  (function f(){
+    dx+=(mx-dx)*.15;dy+=(my-dy)*.15;
+    ch.style.left=dx+'px';ch.style.top=dy+'px';
+    cv.style.left=dx+'px';cv.style.top=dy+'px';
+    cd.style.left=dx+'px';cd.style.top=dy+'px';
+    requestAnimationFrame(f);
+  })();
+  document.querySelectorAll('a,button,select,.rcc,.rl,.sc,.ap,.pcard,.vc,.gc,.pllogo,.tli,.hst').forEach(el=>{
+    el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+    el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+  });
+})();
+
+/* VIDEO LINKS — make cards clickable */
+const videoIds=[
+  {sel:'.vid-grid .vc:nth-child(1)',id:'RwTAgom_VX8'},
+  {sel:'.vid-grid .vc:nth-child(2)',id:'igkv5JDgduA'},
+  {sel:'.vid-grid .vc:nth-child(3)',id:'i2qplvJ6SLs'},
+  {sel:'.shorts-row .vc:nth-child(1)',id:'zP04Nb_lesI'},
+  {sel:'.shorts-row .vc:nth-child(2)',id:'BXmp3gmwUHM'},
+];
+
+/* NAV */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('stk',scrollY>60));
+document.getElementById('hbtn').addEventListener('click',()=>document.getElementById('mob').classList.toggle('open'));
+
+/* SCROLL REVEAL */
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}
+}),{threshold:0,rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.rv,.rvl,.rvr').forEach(el=>{
+  if(el.getBoundingClientRect().top<innerHeight)el.classList.add('on');
+  else io.observe(el);
+});
+
+/* VIDEO CARD CLICK — open YouTube */
+const vids=[
+  ['RwTAgom_VX8','igkv5JDgduA','i2qplvJ6SLs'],
+  ['zP04Nb_lesI','BXmp3gmwUHM'],
+  ['SlaEaN2sm14','2ome1SVK5Cs','3w-C0-zVaW8'],
+  ['B3LpaMSrxbs','N5eseSeExDc']
+];
+document.querySelectorAll('#interviews .vc').forEach((card,i)=>{
+  const flat=['RwTAgom_VX8','igkv5JDgduA','i2qplvJ6SLs','zP04Nb_lesI','BXmp3gmwUHM','SlaEaN2sm14','2ome1SVK5Cs','3w-C0-zVaW8','B3LpaMSrxbs','N5eseSeExDc'];
+  if(flat[i]){
+    card.style.cursor='none';
+    card.addEventListener('click',()=>window.open('https://www.youtube.com/watch?v='+flat[i],'_blank'));
+  }
+});
+
+})();
+</script>
+</body>
+</html>
